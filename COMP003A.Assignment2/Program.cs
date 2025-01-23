@@ -12,32 +12,39 @@ namespace COMP003A.Assignment2
         // Main level
         static void Main(string[] args)
         {
-            string firstname;
-            string secondname;
+            string firstName;
+            string secondName;
             int useage;
-            double productprice;
+            double productPrice;
             bool isStudent; 
 
             Console.Write("Enter your first name: ");
-            firstname = Console.ReadLine();
+            firstName = Console.ReadLine();
 
-            Console.WriteLine("Enter your last name: ");
-            secondname = Console.ReadLine();
+            Console.Write("Enter your last name: ");
+            secondName = Console.ReadLine();
 
             Console.Write("Enter your age: ");
             useage = int.Parse(Console.ReadLine());
 
             Console.Write("What is the price of the item you’re interested in?: ");
-            productprice = double.Parse(Console.ReadLine());
+            productPrice = double.Parse(Console.ReadLine());
 
-            Console.Write("Are you a student? (true/false)");
+            Console.Write("Are you a student? (true/false)? ");
             isStudent = bool.Parse(Console.ReadLine());
 
             int futureage = useage + 5;
+            bool isSenior = useage == 60;
+            double discount1 = isStudent ? productPrice * 0.9 : productPrice;
+            double discount2 =  productPrice * 0.8;
 
-            Console.WriteLine($"\nHello, {firstname} {secondname}!");
+            Console.WriteLine($"\nHello, {firstName} {secondName}!");
             Console.WriteLine($"You are currently {useage} years old. In 5 years, you will be {futureage}.");
-            Console.WriteLine($"The original price of the item is {productprice:C}"); 
+            Console.WriteLine($"The original price of the item is {productPrice}"); 
+            Console.WriteLine($"As a Student, your discounted price is {discount1}");
+            Console.WriteLine($"As a senior citizen, your discounted price would be {discount2}");
+
+
 
         }
     }
