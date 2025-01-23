@@ -16,8 +16,8 @@ namespace COMP003A.Assignment2
             string secondName;
             int useage;
             double productPrice;
-            bool isStudent; 
-
+            bool isStudent;
+      
             Console.Write("Enter your first name: ");
             firstName = Console.ReadLine();
 
@@ -34,7 +34,6 @@ namespace COMP003A.Assignment2
             isStudent = bool.Parse(Console.ReadLine());
 
             int futureage = useage + 5;
-            bool isSenior = useage == 60;
             double discount1 = isStudent ? productPrice * 0.9 : productPrice;
             double discount2 =  productPrice * 0.8;
 
